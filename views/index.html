@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>Exercise Tracker | Free Code Camp</title>
+   <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png"
+      type="image/x-icon" />
+   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+   <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+   
+      <div class="container">
+         <h1 id="title">Exercise Tracker</h1>
+         <center>
+      <div id="flex">
+      <div class="right">
+         <form action="/api/exercise/new-user" method="post" id="new-user">
+            <h3>Create a New User</h3>
+            <input id="uname" type="text" name="username" placeholder="Enter Name">
+            <input type="submit" value="Submit">
+         </form>
+         
+         <form action="/api/exercise/add" method="post" id="add">
+            <h3>Add Exercises</h3>
+            <input id="uid" type="text" name="userId" placeholder="UserId">
+            <input id="desc" type="text" name="description" placeholder="Exercise">
+            <input id="dur" type="text" name="duration" placeholder="Duration (mins)">
+            <input id="dat" type="text" name="date" placeholder="Date (yyyy-mm-dd)">
+            <input type="submit" value="Submit">
+         </form>
+      </div>
+         <br>
+      <div class="left">
+         <form action="/api/exercise/log" method="get" id="id-log">
+            <h3>Get Log by UserId</h3>
+            <input id="uid" type="text" name="userId" placeholder="UserId">
+            <input type="submit" value="Get Log">
+         </form>
+
+         <form action="/api/exercise/users" method="get" id="all">
+            <h3>Get All Users</h3>
+            <input type="submit" value="Get All Users">
+         </form>
+         
+         <form action="/api/exercise/limitedlog" method="get" id="limited">
+            <h3>Get Users' Exercise Log</h3>
+            <input id="uid" type="text" name="userId" placeholder="UserId" required>
+            <input id="from" type="text" name="from" placeholder="From (yyyy-mm-dd)">
+            <input id="to" type="text" name="to" placeholder="To (yyyy-mm-dd)">
+            <input id="limit" type="text" name="limit" placeholder="Number of Entries">
+            <input type="submit" value="Get Log">
+         </form>
+      </div>
+   </div>  
+</div>
+</center>
+</body>
+
+</html>
